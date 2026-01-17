@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./main.css" />
+    <script type="module" src="./src/main.js"></script>
+    <title>Magic Mirror</title>
+  </head>
+
+  <body>
+    <div id="navbar">
+      <div id="logo">
+        <div id="logo-container" onclick="this.querySelector('a').click()">
+          <img src="./logo.png" />
+          <a href="#welcome" hidden></a>
+        </div>
+      </div>
+
+      <div id="buttons">
+        <button id="gallery-button" onclick="this.querySelector('a').click()">
+          Galeria
+          <a href="#gallery" hidden></a>
+        </button>
+
+        <button id="services-button" onclick="this.querySelector('a').click()">
+          Planes
+          <a href="#services" hidden></a>
+        </button>
+
+        <button id="contact-button" onclick="this.querySelector('a').click()">
+          Contacto
+          <a href="#contact" hidden></a>
+        </button>
+      </div>
+    </div>
+
+    <div id="container">
+      <section>
+        <div id="welcome">
+          <div id="video">
+            <img src="./background video placeholder.jpg" />
+            <video muted playsinline loop></video>
+          </div>
+
+          <div id="content">
+            <div id="logo">
+              <img src="./logo.png" />
+            </div>
+
+            <div id="text">
+              <h1>Inmortaliza tus momentos</h1>
+              <p>Tu mejor aliado para convertir cualquier evento en una celebración inolvidable</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div id="gallery">
+          <div id="slider">
+            <div class="image-container">
+              <img src="./Spot1.jpg" />
+            </div>
+
+            <div class="image-container">
+              <img src="./Spot2.jpg" />
+            </div>
+
+            <div class="image-container">
+              <img src="./Spot3.jpg" />
+            </div>
+          </div>
+
+          <div id="text">
+            <div class="text-container">
+              <h1>Tu felicidad, enmarcada para siempre</h1>
+              <p>
+                Convierte las sonrisas de hoy en el legado más valioso del mañana. Fotografía
+                profesional para eventos inolvidables.
+              </p>
+            </div>
+
+            <div class="text-container">
+              <h1>Momentos tan reales que asustan</h1>
+              <p>
+                No dejes que tu mejor disfraz se quede solo en tu memoria. Dale vida a tus
+                personajes favoritos con capturas de alta calidad que cuentan una historia en cada
+                foto.
+              </p>
+            </div>
+
+            <div class="text-container">
+              <h1>Brinda por los momentos inolvidables</h1>
+              <p>
+                Hay celebraciones que merecen ser recordadas por siempre. Capturamos la elegancia y
+                la alegría de tus mejores eventos, para que cada brindis quede guardado en una
+                imagen perfecta.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div id="services">
+          <div id="title">
+            <h3>Elige la opción que mejor se adapte a tu celebración</h3>
+            <h1>¡Conoce nuestros magicos planes!</h1>
+          </div>
+
+          <div id="content">
+            <div id="plan1" class="planes">
+              <img id="logo" src="./logo w.png" />
+              <p id="title">FOTO BOOTH BASICO</p>
+              <ul>
+                <li>2 Horas.</li>
+                <li>Fotos e impresiones ilimitadas 10x15.</li>
+                <li>Asesoría y acompañamiento antes y durante el evento.</li>
+                <li>Accesorios.</li>
+                <li>Plantillas acorde al evento.</li>
+              </ul>
+            </div>
+
+            <div id="plan2" class="planes">
+              <img id="logo" src="./logo w.png" />
+              <p id="title">FOTO BOOTH INTERMEDIO</p>
+              <ul>
+                <li>3 Horas.</li>
+                <li>Fotos e impresiones ilimitadas 10x15.</li>
+                <li>Asesoría y acompañamiento antes y durante el evento.</li>
+                <li>Accesorios.</li>
+                <li>
+                  Plantillas acorde a tu evento y/o personalizadas para hacer tu evento único.
+                </li>
+                <li>Papel fotográfico de alta calidad.</li>
+                <li>Fotos digitales del evento.</li>
+              </ul>
+            </div>
+
+            <div id="plan3" class="planes">
+              <img id="logo" src="./logo.png" />
+              <p id="title">FOTO BOOTH PLUS</p>
+              <ul>
+                <li>4 Horas.</li>
+                <li>Fotos e impresiones ilimitadas 10x15.</li>
+                <li>Asesoría y acompañamiento antes y durante el evento.</li>
+                <li>Accesorios.</li>
+                <li>
+                  Plantillas acorde a tu evento y/o personalizadas para hacer tu evento único.
+                </li>
+                <li>Papel fotográfico de alta calidad.</li>
+                <li>Fotos digitales del evento.</li>
+                <li>Álbum personalizado en madera.</li>
+                <li>Cámara Canon Profesional.</li>
+              </ul>
+              <img id="album" src="./album.jpg" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div id="contact">
+          <div id="title">
+            <h1>¿List@ para hacer de tu próximo evento algo inolvidable?</h1>
+          </div>
+
+          <div id="inner-container">
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="content">
+              <div id="top-half">
+                <div id="logo">
+                  <img src="./logo b.png" />
+                </div>
+
+                <div id="text">
+                  <h1>¡Ponte en contacto con nosotros!</h1>
+                  <button onclick="this.querySelector('a').click()">
+                    Agenda tu proximo evento aqui
+                    <a href="https://wa.me/573107848601" target="_blank" hidden></a>
+                  </button>
+                </div>
+              </div>
+
+              <div id="divisor"></div>
+
+              <div id="bottom-half">
+                <h2>¡Siguenos en nuestras redes!</h2>
+                <div id="links">
+                  <div class="rrss">
+                    <div class="button" onclick="this.querySelector('a').click()">
+                      <img src="./instagram.svg" />
+                      <p>@magicmirror06</p>
+
+                      <a
+                        href="https://www.instagram.com/magicmirror06?igsh=MXc1cW9nZXo3ejk2cg=="
+                        target="_blank"
+                        hidden
+                      ></a>
+                    </div>
+                  </div>
+
+                  <div class="rrss">
+                    <div class="button" onclick="this.querySelector('a').click()">
+                      <img src="./facebook.svg" />
+                      <!-- prettier-ignore -->
+                      <p>Magic Mirror       </p>
+
+                      <a
+                        href="https://www.facebook.com/share/1ZXzBwtuER/"
+                        target="_blank"
+                        hidden
+                      ></a>
+                    </div>
+                  </div>
+
+                  <div class="rrss">
+                    <div class="button" onclick="this.querySelector('a').click()">
+                      <img src="./tiktok.svg" />
+                      <p>@magicmirror06</p>
+
+                      <a
+                        href="https://www.tiktok.com/@magicmirror06?_r=1&_t=ZS-92ufNGuBVDA"
+                        target="_blank"
+                        hidden
+                      ></a>
+                    </div>
+                  </div>
+
+                  <div class="rrss">
+                    <div class="button" onclick="this.querySelector('a').click()">
+                      <img src="./whatsapp.svg" />
+                      <p>+57 310 7848601</p>
+
+                      <a href="https://wa.me/573107848601" target="_blank" hidden></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="footer">
+      <div id="footer-logo">
+        <img id="logo" src="./logo w.png" />
+      </div>
+
+      <div id="copyright">
+        <div id="text">
+          <p>Copyright ©2026</p>
+          <p>Todos los derechos reservados.</p>
+        </div>
+
+        <div id="author">
+          <p>s5689</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
