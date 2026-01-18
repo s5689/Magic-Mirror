@@ -9,3 +9,9 @@
     --DESKTOP_NAVBAR_HEIGHT: 80px;
   }
 }
+
+@media (max-width: 1200px) {
+  #container {
+    width: 100%;
+  }
+}
