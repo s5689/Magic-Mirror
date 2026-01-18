@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,6 +11,7 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./mediaQueries.css" />
     <script type="module" src="./src/main.js"></script>
     <title>Magic Mirror</title>
   </head>
@@ -25,17 +26,17 @@
       </div>
 
       <div id="buttons">
-        <button id="gallery-button" onclick="this.querySelector('a').click()">
+        <button id="gallery-button">
           Galeria
           <a href="#gallery" hidden></a>
         </button>
 
-        <button id="services-button" onclick="this.querySelector('a').click()">
+        <button id="services-button">
           Planes
           <a href="#services" hidden></a>
         </button>
 
-        <button id="contact-button" onclick="this.querySelector('a').click()">
+        <button id="contact-button">
           Contacto
           <a href="#contact" hidden></a>
         </button>
@@ -119,7 +120,7 @@
           <div id="content">
             <div id="plan1" class="planes">
               <img id="logo" src="./logo w.png" />
-              <p id="title">FOTO BOOTH BASICO</p>
+              <p id="plan-title">FOTO BOOTH BASICO</p>
               <ul>
                 <li>2 Horas.</li>
                 <li>Fotos e impresiones ilimitadas 10x15.</li>
@@ -131,7 +132,7 @@
 
             <div id="plan2" class="planes">
               <img id="logo" src="./logo w.png" />
-              <p id="title">FOTO BOOTH INTERMEDIO</p>
+              <p id="plan-title">FOTO BOOTH INTERMEDIO</p>
               <ul>
                 <li>3 Horas.</li>
                 <li>Fotos e impresiones ilimitadas 10x15.</li>
@@ -147,7 +148,7 @@
 
             <div id="plan3" class="planes">
               <img id="logo" src="./logo.png" />
-              <p id="title">FOTO BOOTH PLUS</p>
+              <p id="plan-title">FOTO BOOTH PLUS</p>
               <ul>
                 <li>4 Horas.</li>
                 <li>Fotos e impresiones ilimitadas 10x15.</li>
@@ -161,7 +162,7 @@
                 <li>Álbum personalizado en madera.</li>
                 <li>Cámara Canon Profesional.</li>
               </ul>
-              <img id="album" src="./album.jpg" />
+              <div id="album"><img src="./album.jpg" /></div>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 :root {
-  --DESKTOP_SECTION_SIZE: calc(100vh - 120px);
+  --DESKTOP_NAVBAR_HEIGHT: 118px;
+  --DESKTOP_SECTION_SIZE: calc(100vh - var(--DESKTOP_NAVBAR_HEIGHT) - 2px);
   --DESKTOP_SECTION_MIN_SIZE: 500px;
   --BACKGROUND_COLOR: #181818;
 }
@@ -14,7 +15,7 @@ body {
 }
 
 section {
-  scroll-margin-top: 120px;
+  scroll-margin-top: var(--DESKTOP_NAVBAR_HEIGHT);
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
@@ -25,7 +26,7 @@ section {
   align-items: center;
   top: 0;
   left: 0;
-  height: 118px;
+  height: var(--DESKTOP_NAVBAR_HEIGHT);
   padding: 0 5%;
 
   background-color: rgb(1, 0, 244);
@@ -42,6 +43,7 @@ section {
 }
 
 #navbar #logo #logo-container {
+  display: flex;
   width: min-content;
   transition: transform 300ms;
   cursor: pointer;
@@ -52,7 +54,9 @@ section {
 }
 
 #navbar #logo #logo-container img {
-  height: 90px;
+  height: 13vh;
+  min-height: 66.55px;
+  max-height: 90px;
 }
 
 #navbar #buttons {
@@ -91,7 +95,9 @@ section {
 
   background-size: 100% 100%;
 
-  transition: width 300ms ease-in-out, background 300ms;
+  transition:
+    width 300ms ease-in-out,
+    background 300ms;
 }
 
 #navbar #buttons button[current]::before {
@@ -187,8 +193,8 @@ section {
 }
 
 #container #welcome #content #text p {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
-    sans-serif;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 30px;
   text-align: center;
 
@@ -216,7 +222,10 @@ section {
 }
 
 #container #gallery #slider .image-container {
+  display: flex;
   position: absolute;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   opacity: 0;
 
@@ -234,12 +243,15 @@ section {
 }
 
 #container #gallery #slider .image-container img {
-  height: inherit;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #container #gallery #text {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
-    sans-serif;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 
   display: flex;
   align-items: center;
@@ -275,41 +287,51 @@ section {
 }
 
 #container #services {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
-    sans-serif;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   display: flex;
   flex-direction: column;
   place-items: center;
 
-  min-height: var(--DESKTOP_SECTION_MIN_SIZE);
+  min-height: 780px;
   height: var(--DESKTOP_SECTION_SIZE);
 
   color: white;
 }
 
 #container #services #title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  padding: 1rem;
+
+  height: 15%;
+  width: 100%;
+}
+
+#container #services #title h1,
+#container #services #title h3 {
+  padding: 0;
+  margin: 0.5rem;
 }
 
 #container #services #content {
   display: flex;
   justify-content: center;
+
   width: 100%;
-  height: 100%;
+  height: 85%;
 
   gap: 1rem;
 }
 
 #container #services #content .planes {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   width: calc(33% - 3rem);
-  height: 70%;
-  min-height: 590px;
+  height: 630px;
   padding: 1rem 1rem;
 
   border-radius: 1.5rem;
@@ -323,8 +345,9 @@ section {
   width: fit-content;
 }
 
-#container #services #content .planes #title {
+#container #services #content .planes #plan-title {
   font-size: 20px;
+  text-align: center;
   width: 100%;
   padding: 0.5rem 0;
 }
@@ -339,7 +362,7 @@ section {
   background-color: #43bf81;
 }
 
-#container #services #content #plan1 #title {
+#container #services #content #plan1 #plan-title {
   border-top: 1px solid #e6fff8;
   border-bottom: 1px solid #e6fff8;
 }
@@ -348,7 +371,7 @@ section {
   background-color: #e978d4;
 }
 
-#container #services #content #plan2 #title {
+#container #services #content #plan2 #plan-title {
   border-top: 1px solid #fff4ff;
   border-bottom: 1px solid #fff4ff;
 }
@@ -357,21 +380,26 @@ section {
   background-color: #6d66c6;
 }
 
-#container #services #content #plan3 #title {
+#container #services #content #plan3 #plan-title {
   border-top: 1px solid #fcfcff;
   border-bottom: 1px solid #fcfcff;
 }
 
 #container #services #content #plan3 #album {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  width: 25%;
+  display: flex;
+  justify-content: end;
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+}
+
+#container #services #content #plan3 #album img {
+  height: 100%;
 }
 
 #container #contact {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
-    sans-serif;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   display: flex;
   flex-direction: column;
   place-items: center;
@@ -380,10 +408,11 @@ section {
   min-height: var(--DESKTOP_SECTION_MIN_SIZE);
   height: var(--DESKTOP_SECTION_SIZE);
 }
-
+/* 
 #container #contact #title {
   padding: 1rem 0;
 }
+*/
 
 #container #contact #inner-container {
   position: relative;
@@ -448,7 +477,8 @@ section {
   height: calc(90% - 19px);
 
   background-color: #f3e5f5;
-  background-image: radial-gradient(at 0% 0%, hsla(253, 16%, 81%, 1) 0px, transparent 50%),
+  background-image:
+    radial-gradient(at 0% 0%, hsla(253, 16%, 81%, 1) 0px, transparent 50%),
     radial-gradient(at 100% 0%, hsla(225, 39%, 90%, 1) 0px, transparent 50%),
     radial-gradient(at 100% 100%, hsla(339, 49%, 91%, 1) 0px, transparent 50%),
     radial-gradient(at 0% 100%, hsla(210, 30%, 85%, 1) 0px, transparent 50%);
@@ -472,7 +502,10 @@ section {
 }
 
 #container #contact #inner-container #content #top-half #logo img {
-  width: 70%;
+  width: auto;
+  height: auto;
+  max-width: 70%;
+  max-height: 90%;
 }
 
 #container #contact #inner-container #content #top-half #text {
@@ -499,7 +532,10 @@ section {
   border-radius: 2rem;
 
   box-shadow: 5px 5px 20px #00000066;
-  transition: background 300ms, border 300ms, color 300ms;
+  transition:
+    background 300ms,
+    border 300ms,
+    color 300ms;
   cursor: pointer;
 }
 
@@ -577,8 +613,8 @@ section {
 }
 
 #footer {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
-    sans-serif;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 17px;
   position: relative;
   width: 90%;

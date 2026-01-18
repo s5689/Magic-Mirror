@@ -1,0 +1,11 @@
+@media (max-height: 763px) {
+  :root {
+    --DESKTOP_NAVBAR_HEIGHT: calc(16vh - 2px);
+  }
+}
+
+@media (max-height: 513px) {
+  :root {
+    --DESKTOP_NAVBAR_HEIGHT: 80px;
+  }
+}
