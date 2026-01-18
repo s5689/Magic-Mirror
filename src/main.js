@@ -22,14 +22,24 @@
 (async () => {
   const gallerySlides = document.querySelectorAll("#container #gallery #slider .image-container");
   const galleryTexts = document.querySelectorAll("#container #gallery #text .text-container");
+  const galleryMobileHeaders = document.querySelectorAll(
+    "#container #gallery #text-header-mobile .text-container",
+  );
+  const galleryMobileFooters = document.querySelectorAll(
+    "#container #gallery #text-footer-mobile .text-container",
+  );
   let currentGallery = 0;
 
   while (true) {
     gallerySlides.forEach((value) => (value.style.opacity = 0));
     galleryTexts.forEach((value) => (value.style.opacity = 0));
+    galleryMobileHeaders.forEach((value) => (value.style.opacity = 0));
+    galleryMobileFooters.forEach((value) => (value.style.opacity = 0));
 
     gallerySlides[currentGallery].style.opacity = 1;
     galleryTexts[currentGallery].style.opacity = 1;
+    galleryMobileHeaders[currentGallery].style.opacity = 1;
+    galleryMobileFooters[currentGallery].style.opacity = 1;
 
     currentGallery++;
 

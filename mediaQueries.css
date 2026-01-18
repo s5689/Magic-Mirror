@@ -1,3 +1,4 @@
+/* Height fixes */
 @media (max-height: 763px) {
   :root {
     --DESKTOP_NAVBAR_HEIGHT: calc(16vh - 2px);
@@ -10,8 +11,318 @@
   }
 }
 
+/* RRSS FACEBOOK BUTTON FIX*/
+@media (max-width: 479px) {
+  #container #contact #inner-container #content #bottom-half #links .rrss .button p#mobile {
+    display: block;
+  }
+
+  #container #contact #inner-container #content #bottom-half #links .rrss .button p#desktop {
+    display: none;
+  }
+}
+
+/* Tablet */
 @media (max-width: 1200px) {
   #container {
     width: 100%;
   }
 }
+
+/* Mobile */
+@media (max-width: 919px) {
+  :root {
+    --DESKTOP_NAVBAR_HEIGHT: 80px;
+  }
+
+  #navbar {
+    padding: 0;
+  }
+
+  #navbar #logo {
+    display: none;
+  }
+
+  #navbar #buttons {
+    justify-content: center;
+
+    width: 100%;
+    gap: 1rem;
+  }
+
+  #navbar #buttons button {
+    padding: 0 min(16px, max(calc(calc(calc(100vw - 375px) / 100) * 16), 0px));
+    font-size: min(28px, max(calc(calc(calc(100vw - 375px) / 100) * 28), 20px));
+  }
+
+  #container #welcome #content {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #container #welcome #content #logo {
+    height: 50%;
+    width: 100%;
+  }
+
+  #container #welcome #content #logo img {
+    width: auto;
+    max-width: 70%;
+    max-height: 70%;
+  }
+
+  #container #welcome #content #text {
+    place-self: center;
+    height: 50%;
+    width: 90%;
+    padding: 0;
+  }
+
+  #container #welcome #content #text h1 {
+    font-size: min(40px, max(calc(calc(calc(100vw - 400px) / 210) * 40), 30px));
+  }
+
+  #container #welcome #content #text p {
+    font-size: min(30px, max(calc(calc(calc(100vw - 400px) / 210) * 30), 20px));
+  }
+
+  #container #gallery {
+    flex-direction: column;
+    background: radial-gradient(circle 50vw at center, #ff9f00 0%, var(--BACKGROUND_COLOR) 100%);
+  }
+
+  #container #gallery #slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    width: 100%;
+    height: 60%;
+  }
+
+  #container #gallery #text {
+    display: none;
+  }
+
+  #container #gallery #text-header-mobile,
+  #container #gallery #text-footer-mobile {
+    font-family:
+      "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 100%;
+    height: 20%;
+
+    color: white;
+    text-shadow: 5px 5px 5px #ff590091;
+  }
+
+  #container #gallery #text-header-mobile .text-container,
+  #container #gallery #text-footer-mobile .text-container {
+    position: absolute;
+    opacity: 0;
+
+    width: 100%;
+    transition: opacity 1000ms;
+  }
+
+  #container #gallery #text-header-mobile .text-container h1 {
+    font-size: min(38px, max(calc(calc(calc(100vw - 320px) / 319) * 38), 22px));
+    padding: 0 1rem;
+  }
+
+  #container #gallery #text-footer-mobile .text-container p {
+    font-size: min(20px, max(calc(calc(calc(100vw - 320px) / 319) * 20), 14px));
+    padding: 0 1rem;
+  }
+
+  #container #services #title {
+    margin: 1rem 0;
+  }
+
+  #container #services #title h3 {
+    font-size: min(19px, max(calc(calc(calc(100vw - 320px) / 200) * 19), 16px));
+    padding: 0 0.5rem;
+  }
+
+  #container #services #title h1 {
+    font-size: min(32px, max(calc(calc(calc(100vw - 320px) / 200) * 32), 26px));
+    padding: 0 0.5rem;
+  }
+
+  #container #services #content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  #container #services #content .planes {
+    width: 80%;
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
+  #container #contact {
+    height: auto;
+    min-height: var(--DESKTOP_SECTION_SIZE);
+  }
+
+  #container #contact #title {
+    margin: 0.5rem 0;
+  }
+
+  #container #contact #title h1 {
+    font-size: min(32px, max(calc(calc(calc(100vw - 320px) / 330) * 32), 20px));
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+
+  #container #contact #inner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: auto;
+  }
+
+  #container #contact #inner-container #line1,
+  #container #contact #inner-container #line2 {
+    display: none;
+  }
+
+  #container #contact #inner-container #content {
+    position: static;
+    transform: none;
+
+    width: 90%;
+    height: auto;
+    padding-bottom: 1rem;
+
+    border: min(10px, max(calc(calc(calc(100vw - 320px) / 330) * 10), 4px)) solid;
+
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+      to right,
+      #e2be68 0%,
+      #856029 40%,
+      #856029 60%,
+      #e2be68 100%
+    );
+    gap: 1rem;
+  }
+
+  #container #contact #inner-container #content #top-half {
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+  }
+
+  #container #contact #inner-container #content #top-half #logo {
+    width: auto;
+    height: auto;
+    padding: 1rem;
+  }
+
+  #container #contact #inner-container #content #top-half #logo img {
+    max-width: 50%;
+    max-height: 151px;
+  }
+
+  #container #contact #inner-container #content #top-half #text {
+    width: 100%;
+    gap: 0;
+  }
+
+  #container #contact #inner-container #content #top-half #text h1 {
+    font-size: min(32px, max(calc(calc(calc(100vw - 320px) / 330) * 32), 24px));
+  }
+
+  #container #contact #inner-container #content #top-half #text button {
+    font-size: min(20px, max(calc(calc(calc(100vw - 320px) / 330) * 32), 14px));
+    width: auto;
+  }
+
+  #container #contact #inner-container #content #divisor {
+    width: 80%;
+  }
+
+  #container #contact #inner-container #content #bottom-half {
+    flex-direction: column;
+    height: auto;
+    padding: 0 1rem;
+  }
+
+  #container #contact #inner-container #content #bottom-half h2 {
+    font-size: min(24px, max(calc(calc(calc(100vw - 320px) / 330) * 24), 18px));
+    margin: 0 0 1rem 0;
+    width: 100%;
+  }
+
+  #container #contact #inner-container #content #bottom-half #links {
+    width: 100%;
+    height: auto;
+  }
+
+  #container #contact #inner-container #content #bottom-half #links .rrss {
+    flex: 1 1 50%;
+    flex-wrap: wrap;
+
+    height: auto;
+    width: auto;
+    max-width: 50%;
+    min-width: 200px;
+  }
+
+  #container #contact #inner-container #content #bottom-half #links .rrss .button {
+    width: auto;
+    height: auto;
+  }
+
+  #container #contact #inner-container #content #bottom-half #links .rrss .button img {
+    max-height: 48px;
+  }
+
+  #footer {
+    width: 90%;
+    height: auto;
+  }
+
+  #footer #footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem 5%;
+  }
+
+  #footer #copyright {
+    flex-direction: column;
+    position: static;
+    width: 100%;
+  }
+
+  #footer #copyright #text {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    gap: 0;
+  }
+
+  #footer #copyright #text p {
+    margin: 0;
+  }
+
+  #footer #copyright #author {
+    justify-items: center;
+    width: 100%;
+  }
+}
+
+/*
+  align-items: center;
+  justify-content: center;
+*/
